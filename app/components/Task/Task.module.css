@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.task {
+    width: 900px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(204, 204, 204);
+    margin: 5px auto;
+    border-radius: 3px;
+    box-shadow: 1px 0px 5px rgb(141, 136, 136);
+    font-family: 'Oswald', sans-serif;
+}
+
+    .task__text {
+        width: 600px;
+        height: 100px;
+        padding: 5px 10px;
+    }
+
+        .task__text h3 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .task__text p {
+            margin: 0;
+            padding: 0;
+            }
+
+    .task__timer {
+        width: 300px;
+        height: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+        .task__timer h4 {
+            width: 150px;
+            color: green;
+            margin: 0 auto;
+        }
+
+        .task__timer__buttons {
+            width: 50px;
+            margin: 0 auto;
+        }
+
+        .task__timer__buttons div {
+            width: 20px;
+            height: 20px;
+            margin: 5px auto;
+        }
