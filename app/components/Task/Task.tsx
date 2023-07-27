@@ -2,17 +2,16 @@
 
 import styles from './Task.module.css';
 
-import Image from 'next/image';
-
 import { FC } from 'react';
 
 interface Props {
     taskName: string;
     taskDescription: string;
     taskDeadline: string;
+    deleteFunction: () => void;
 }
 
-const Task: FC<Props> = ({ taskName, taskDescription, taskDeadline }) => {
+const Task: FC<Props> = ({ taskName, taskDescription, taskDeadline, deleteFunction }) => {
     return (
         <div className={styles.task}>
 
@@ -25,34 +24,9 @@ const Task: FC<Props> = ({ taskName, taskDescription, taskDeadline }) => {
                 <h4>Deadline: {taskDeadline}</h4>
 
                 <div className={styles.task__timer__buttons}>
-
-                    <div>
-                        <Image 
-                            src='/done.svg'
-                            width={20}
-                            height={20}
-                            alt='Done'
-                        />
-                    </div>
-
-                    <div>
-                        <Image 
-                            src='/delete.svg'
-                            width={16}
-                            height={16}
-                            alt='Delete'
-                        />
-                    </div>
-
-                    <div>
-                        <Image 
-                            src='/edit.svg'
-                            width={16}
-                            height={16}
-                            alt='Delete'
-                        />
-                    </div>
-
+                <h3 className={styles.done__button}>✓</h3>
+                <h3 className={styles.delete__button} onClick={deleteFunction}>✗</h3>
+                <h3 className={styles.edit__button}>✎</h3>
                 </div>
             </div>
 

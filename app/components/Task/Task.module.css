@@ -48,8 +48,21 @@
             margin: 0 auto;
         }
 
-        .task__timer__buttons div {
-            width: 20px;
-            height: 20px;
-            margin: 5px auto;
+        .task__timer__buttons h3 {
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            width: 15px;
+        }
+
+        .done__button:hover {
+            color: green;
+        }
+
+        .delete__button:hover {
+            color: red;
+        }
+
+        .edit__button:hover {
+            color: yellow;
         }

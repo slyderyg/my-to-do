@@ -17,7 +17,7 @@ export default function Home() {
   const [taskNameInput, setTaskNameInput] = useState('');
   const [taskDescriptionInput, setTaskDescriptionInput] = useState('');
   const [taskDeadlineInput, setTaskDeadlineInput] = useState('');
-  const[newTask, setNewTask] = useState<NewTask[]>([]); // проверить типизацию
+  const[newTask, setNewTask] = useState<NewTask[]>([]);
 
   function handleTaskNameInput(event: ChangeEvent<HTMLInputElement>): void {
     setTaskNameInput(event.target.value)
@@ -37,13 +37,15 @@ export default function Home() {
     setTaskNameInput('');
     setTaskDescriptionInput('');
     setTaskDeadlineInput('');
-    console.log(newTask);
   }
 
   return (
     <>
+
     <AddNewToDoForm handleTaskNameInput={handleTaskNameInput} taskNameValue={taskNameInput} handleTaskDescriptionInput={handleTaskDescriptionInput} taskDescriptionValue={taskDescriptionInput} handleTaskDeadlineInput={handleTaskDeadlineInput} taskDeadlineValue={taskDeadlineInput} handleAddNewTask={handleAddNewTask}/>
-    {newTask.map(t=> <Task key={t.id} taskName={t.taskName} taskDescription={t.taskDescription} taskDeadline={t.taskDeadline}/>)}
+    
+    {newTask.map(t=> <Task key={t.id} taskName={t.taskName} taskDescription={t.taskDescription} taskDeadline={t.taskDeadline} deleteFunction={() => {setNewTask(newTask.filter(el => el.id !== t.id))}}/>)}
+    
     </>
   )
 }
