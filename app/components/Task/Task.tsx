@@ -12,6 +12,12 @@ interface Props {
 }
 
 const Task: FC<Props> = ({ taskName, taskDescription, taskDeadline, deleteFunction }) => {
+    const deadline = new Date(taskDeadline);
+    const nowDate = new Date();
+    const oneDay = 1000 * 60 * 60 * 24; 
+    const diff = deadline.getTime() - nowDate.getTime();
+    const days = Math.round(diff/oneDay);
+
     return (
         <div className={styles.task}>
 
@@ -21,7 +27,7 @@ const Task: FC<Props> = ({ taskName, taskDescription, taskDeadline, deleteFuncti
             </div>
 
             <div className={styles.task__timer}>
-                <h4>Deadline: {taskDeadline}</h4>
+                <h4>To deadline: {days} days </h4>
 
                 <div className={styles.task__timer__buttons}>
                 <h3 className={styles.done__button}>✓</h3>
