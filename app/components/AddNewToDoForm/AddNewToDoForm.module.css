@@ -2,7 +2,7 @@
 
 .form {
     width: 900px;
-    height: 230px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,7 +15,7 @@
 
     .task__text__field {
         width: 300px;
-        height: 230px;
+        height: 100px;
     }
 
         .task__name {
@@ -26,19 +26,9 @@
             width: 200px;
         }
 
-        .task__description {
-            padding: 10px 20px;
-        }
-
-        .task__description__input {
-            width: 200px;
-            height: 100px;
-            resize: none;
-        }
-
     .task__date__field {
         width: 300px;
-        height: 230px;
+        height: 100px;
     }
         .task__date {
             padding: 10px 20px;
@@ -50,10 +40,10 @@
 
     .task__button__field {
         width: 300px;
-        height: 230px;
+        height: 100px;
         display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
+        align-items: center;
+        justify-content: center;
 
     }
 
