@@ -34,8 +34,10 @@ export default function Home() {
   }
 
   function handleAddNewTask() {
-    setNewTask([...newTask, {id: postId, taskName: taskNameInput, taskDeadline: taskDeadlineInput}]);
-    localStorage.setItem('task', JSON.stringify([...newTask, {id: postId, taskName: taskNameInput, taskDeadline: taskDeadlineInput}]));
+    let preNewTask = [...newTask, {id: postId, taskName: taskNameInput, taskDeadline: taskDeadlineInput}];
+    let sortedPreNewTask = preNewTask.sort((a, b) => a.taskDeadline > b.taskDeadline ? 1 : -1);
+    setNewTask(sortedPreNewTask);
+    localStorage.setItem('task', JSON.stringify(sortedPreNewTask));
     postId = Number(new Date);;
     setTaskNameInput('');
     setTaskDeadlineInput('');
