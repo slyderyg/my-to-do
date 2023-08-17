@@ -41,6 +41,7 @@ export default function Home() {
     setTaskDeadlineInput('');
   }
 
+
   return (
     <>
 
@@ -54,6 +55,7 @@ export default function Home() {
     
     {newTask.map(t=> <Task 
       key={t.id} 
+      postId = {t.id} 
       taskName={t.taskName} 
       taskDeadline={t.taskDeadline} 
       deleteFunction={
@@ -68,6 +70,14 @@ export default function Home() {
           localStorage.setItem('task', JSON.stringify(newTask.filter(el => el.id !== t.id))); 
           setCompletedTask([...completedTask, newTask.filter(el => el.id === t.id)[0]]); 
           localStorage.setItem('completedTask', JSON.stringify([...completedTask, newTask.filter(el => el.id === t.id)[0]]))
+        }
+      }
+      editFunction={
+        (editedTaskName: string, editedTaskDeadline: string) => {
+          let editedNewTask = newTask.filter(el => el.id !== t.id);
+          editedNewTask.push({id: t.id, taskName: editedTaskName, taskDeadline: editedTaskDeadline});
+          setNewTask(editedNewTask);
+          localStorage.setItem('task', JSON.stringify(editedNewTask));
         }
       }
     />)}

@@ -65,3 +65,9 @@
         .edit__button:hover {
             color: yellow;
         }
+
+        .edit__input {
+            display: block;
+            width: 200px;
+            margin-left: 20px;
+        }
