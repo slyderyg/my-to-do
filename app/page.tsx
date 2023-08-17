@@ -78,7 +78,8 @@ export default function Home() {
         (editedTaskName: string, editedTaskDeadline: string) => {
           let editedNewTask = newTask.filter(el => el.id !== t.id);
           editedNewTask.push({id: t.id, taskName: editedTaskName, taskDeadline: editedTaskDeadline});
-          setNewTask(editedNewTask);
+          let sortEditedNewTask = editedNewTask.sort((a, b) => a.taskDeadline > b.taskDeadline ? 1 : -1);
+          setNewTask(sortEditedNewTask);
           localStorage.setItem('task', JSON.stringify(editedNewTask));
         }
       }
