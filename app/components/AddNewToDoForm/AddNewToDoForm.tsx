@@ -19,8 +19,8 @@ const AddNewToDoForm: FC<handleTaskNameInputProps> = ({ handleTaskNameInput, han
 
             <div className={styles.task__text__field}>
 
-                <div className={ styles.task__name}>
-                    <label>Task name: <br /><input onChange={ handleTaskNameInput } type="text" value={ taskNameValue } className={ styles.task__name__input }/></label>
+                <div className={ styles.task__name }>
+                    <label><span className={ styles.task__name__span }>Task name:</span><br /><input onChange={ handleTaskNameInput } type="text" value={ taskNameValue } className={ styles.task__name__input }/></label>
                 </div>
 
             </div>
@@ -34,7 +34,7 @@ const AddNewToDoForm: FC<handleTaskNameInputProps> = ({ handleTaskNameInput, han
             </div>
 
             <div className={styles.task__button__field}>
-                <button onClick={handleAddNewTask}>Add new task</button>
+                <button onClick={handleAddNewTask} className={styles.task__button__field__button}>Add new task</button>
             </div>
 
             <div className={styles.task__button__field}>

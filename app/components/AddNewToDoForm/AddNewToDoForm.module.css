@@ -22,6 +22,10 @@
             padding: 10px 20px;
         }
 
+        .styles.task__name__span {
+            font-family: 'Oswald', sans-serif;
+        }
+
         .task__name__input {
             width: 200px;
         }
@@ -47,7 +51,7 @@
 
     }
 
-    .task__button__field button {
+    .task__button__field__button {
         display: block;
         width: 100px;
         height: 30px;
