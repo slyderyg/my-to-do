@@ -66,8 +66,23 @@
             color: yellow;
         }
 
+        .task__text__edit {
+            width: 500px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+    
+        }
+
         .edit__input {
             display: block;
             width: 200px;
             margin-left: 20px;
+        }
+
+        .edit__input__date {
+            display: block;
+            width: 150px;
+ 
         }
