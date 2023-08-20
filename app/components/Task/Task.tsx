@@ -39,8 +39,8 @@ const Task: FC<Props> = ({ postId, taskName, taskDeadline, deleteFunction, compl
                 <h3>{ taskName }</h3>
             </div>
 
-            <div className={styles.task__timer}>
-                <h4>To deadline: {days} days </h4>
+            <div className={ styles.task__timer }>
+                <p className={ styles.task__timer__deadline }>To deadline: { days } days </p>
 
                 <div className={styles.task__timer__buttons}>
                 <h3 className={styles.done__button} onClick={ completeFunction }>✓</h3>

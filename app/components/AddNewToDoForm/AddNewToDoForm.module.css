@@ -1,5 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+@media (max-width: 960px) {
+    .form {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgb(204, 204, 204);
+        margin: 10px auto;
+        border-radius: 3px;
+        box-shadow: 1px 0px 5px rgb(141, 136, 136);
+        font-family: 'Oswald', sans-serif;
+    }
+    
+        .task__text__field {
+            width: 200px;
+            height: 60px;
+        }
+    
+            .task__name {
+                padding: 0;
+            }
+    
+            .task__name__input {
+                width: 200px;
+            }
+    
+        .task__date__field {
+            width: 200px;
+            height: 60px;
+        }
+            .task__date {
+                padding: 0;
+            }
+    
+                .task__date__input {
+                    width: 200px;
+                }
+    
+        .task__button__field {
+            width: 200px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+        }
+    
+        .task__button__field__button {
+            display: block;
+            width: 100px;
+            height: 30px;
+ 
+        }
+}
+
+@media (min-width: 961px) {
 .form {
     width: 900px;
     height: 100px;
@@ -53,3 +110,4 @@
         height: 30px;
         margin: 10px;
     }
+}

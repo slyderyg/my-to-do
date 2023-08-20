@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+@media (min-width: 961px) {
 .task {
     width: 900px;
     height: 100px;
@@ -65,3 +66,69 @@
         .edit__button:hover {
             color: yellow;
         }
+    }
+
+    @media (max-width: 960px) {
+        .task {
+            width: 300px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgb(204, 204, 204);
+            margin: 5px auto;
+            border-radius: 3px;
+            box-shadow: 1px 0px 5px rgb(141, 136, 136);
+            font-family: 'Oswald', sans-serif;
+        }
+        
+            .task__text {
+                display: flex;
+                align-items: center;
+                box-sizing: border-box;
+        
+            }
+        
+                .task__text h3 {
+                    width: 200px;
+                    margin: 0;
+                    
+                }
+        
+            .task__timer {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+        
+                .task__timer h4 {
+                 
+                    color: green;
+                    margin: 0 auto;
+                }
+        
+                .task__timer__buttons {
+                
+                    margin: 0 auto;
+                }
+        
+                .task__timer__buttons h3 {
+                    margin: 0;
+                    padding: 0;
+                    cursor: pointer;
+                    width: 15px;
+                }
+        
+                .done__button:hover {
+                    color: green;
+                }
+        
+                .delete__button:hover {
+                    color: red;
+                }
+        
+                .edit__button:hover {
+                    color: yellow;
+                }
+}
+        
