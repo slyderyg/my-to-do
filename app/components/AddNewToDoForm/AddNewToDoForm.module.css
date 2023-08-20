@@ -58,6 +58,7 @@
             display: block;
             width: 150px;
             height: 30px;
+            margin-top: 15px;
  
         }
 }
@@ -102,7 +103,7 @@
             }
 
     .task__button__field {
-        width: 300px;
+        width: 180px;
         height: 100px;
         display: flex;
         align-items: center;
