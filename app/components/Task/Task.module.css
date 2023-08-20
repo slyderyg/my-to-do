@@ -136,7 +136,7 @@
             }
     
             .task__timer__buttons h3 {
-                margin: 0;
+                margin: 5px;
                 padding: 0;
                 cursor: pointer;
                 width: 15px;
@@ -165,13 +165,12 @@
     
             .edit__input {
                 display: block;
+                margin: 10px;
 
             }
     
             .edit__input__date {
                 display: block;
-                margin: 0  auto;
- 
-     
+                margin: 0 auto;
             }
 }

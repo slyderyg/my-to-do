@@ -37,7 +37,7 @@ const AddNewToDoForm: FC<handleTaskNameInputProps> = ({ handleTaskNameInput, han
                 <button onClick={handleAddNewTask} className={styles.task__button__field__button}>Add new task</button>
             </div>
 
-            <div className={styles.task__button__field}>
+            <div className={styles.task__button__field__home}>
                 <Link href='/completed'>Completed Tasks</Link>
             </div>
 
