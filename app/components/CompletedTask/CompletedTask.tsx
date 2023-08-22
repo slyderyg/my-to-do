@@ -16,7 +16,7 @@ const CompletedTask: FC<Props> = ({ taskName, deleteFunction }) => {
         <div className={styles.task}>
 
             <div className={styles.task__text}>
-                <h3>{ taskName }</h3>
+                { taskName }
             </div>
 
             <div className={styles.task__timer}>

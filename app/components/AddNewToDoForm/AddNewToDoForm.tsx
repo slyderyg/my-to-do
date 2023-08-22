@@ -14,13 +14,17 @@ interface handleTaskNameInputProps {
 }
 
 const AddNewToDoForm: FC<handleTaskNameInputProps> = ({ handleTaskNameInput, handleTaskDeadlineInput, handleAddNewTask, taskNameValue, taskDeadlineValue }) => {
+
+    const today = new Date();
+    const minDay = today.toISOString().split("T")[0];
+
     return (
         <div className={ styles.form }>
 
             <div className={styles.task__text__field}>
 
                 <div className={ styles.task__name }>
-                    <label>Task name: <br /><input onChange={ handleTaskNameInput } type="text" value={ taskNameValue } className={ styles.task__name__input }/></label>
+                    <label>Task name: <br /><input onChange={ handleTaskNameInput } type="text" value={ taskNameValue } maxLength={ 160 } className={ styles.task__name__input }/></label>
                 </div>
 
             </div>
@@ -28,14 +32,20 @@ const AddNewToDoForm: FC<handleTaskNameInputProps> = ({ handleTaskNameInput, han
             <div className={styles.task__date__field}>
 
                 <div className={styles.task__date}>
-                    <label>Deadline: <br /><input onChange={ handleTaskDeadlineInput } type="date" value={ taskDeadlineValue } className={ styles.task__name__input }/></label>
+                    <label>Deadline: <br /><input onChange={ handleTaskDeadlineInput } type="date" min={ minDay } value={ taskDeadlineValue } className={ styles.task__name__input }/></label>
                 </div>
 
             </div>
+            { taskNameValue&&taskDeadlineValue?
+                    <div className={styles.task__button__field}>
+                        <button onClick={handleAddNewTask} className={styles.task__button__field__button}>Add new task</button>
+                    </div>
+                :
+                    <div className={styles.task__button__field}>
+                        <button disabled>Add new task</button>
+                    </div>
+            }
 
-            <div className={styles.task__button__field}>
-                <button onClick={handleAddNewTask} className={styles.task__button__field__button}>Add new task</button>
-            </div>
 
             <div className={styles.task__button__field__home}>
                 <Link href='/completed'>Completed Tasks</Link>
